@@ -35,28 +35,9 @@ public class DTITTest {
 
  
    @BeforeMethod
-public void resetToHome() {
-    driver.get("https://tsitfilemanager.in/vishwa/dtit/");
-
-    try {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        WebElement closeButton = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//button[@data-testid='eash-close-button']")
-                )
-        );
-
-        ((JavascriptExecutor) driver)
-                .executeScript("arguments[0].click();", closeButton);
-
-        System.out.println("EASH popup closed");
-
-    } catch (Exception e) {
-        System.out.println("EASH popup not displayed");
+    public void resetToHome() {
+        driver.get("https://tsitfilemanager.in/vishva/dtit/");
     }
-}
-
     @AfterSuite
     public void tearDownSuite() {
         if (driver != null) {
