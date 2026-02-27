@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import DTITWebsite.DTITTest;
 
-public class TeamModuletest extends DTITTest {
+public class TeamModuleTest extends DTITTest {
 	
 	@Test
 	public void Team() throws InterruptedException {
